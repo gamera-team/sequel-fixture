@@ -6,6 +6,7 @@ class Sequel::Fixture
   class MissingConnectionError < StandardError; end
   class LoadingFixtureIllegal < StandardError; end
   class ChangingConnectionIllegal < StandardError; end
+  class DatabaseError < StandardError; end
 
   class MissingProcessedValueError < StandardError
     attr_accessor :field
