@@ -1,6 +1,7 @@
+_This is a (hopefully temporary) fork of https://github.com/whitepages/sequel-fixture which incorporates some changes from @diminish7 that we need for https://github.com/gamera-team/gamera_
+
 Sequel::Fixture
 ===============
-[![Build Status](https://secure.travis-ci.org/whitepages/sequel-fixture.png)](http://travis-ci.org/whitepages/sequel-fixture) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/whitepages/sequel-fixture)
 
 Just like Rails fixtures, but for Sequel.
 
@@ -80,10 +81,10 @@ fixture.rollback            # returns users and messages to pristine status ('TR
 
 fixture = Sequel::Fixture.new :simple, DB, false    # The `false` flag prevent the constructor to automatically push
                                                     # the fixture into the database
-                                                    
+
 fixture.check               # Will fail if the user or messages table
                             # were already occupied with something
-                            
+
 fixture.push                # Inserts the fixture in the database
 
 fixture.rollback            # Don't forget to rollback
