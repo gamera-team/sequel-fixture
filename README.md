@@ -1,5 +1,8 @@
 _This is a (hopefully temporary) fork of https://github.com/whitepages/sequel-fixture which incorporates some changes from @diminish7 that we need for https://github.com/gamera-team/gamera_
 
+[![Build Status](https://secure.travis-ci.org/gamera-team/sequel-fixture.png)](http://travis-ci.org/gamera-team/sequel-fixture)
+[![Dependency Status](https://gemnasium.com/gamera-team/sequel-fixture.png)](https://gemnasium.com/gamera-team/sequel-fixture)
+
 Sequel::Fixture
 ===============
 

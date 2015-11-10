@@ -1,6 +1,5 @@
 require "sequel"
 require "symbolmatrix"
-require "fast"
 
 require "sequel-fixture/version"
 require "sequel-fixture/exceptions"
@@ -47,7 +46,7 @@ class Sequel::Fixture
   def load(fixture)
     raise LoadingFixtureIllegal, "A check has already been made, loading a different fixture is illegal" if @checked
 
-    Fast.dir("#{fixtures_path}/#{fixture}").files.each do |file|
+    Dir.entries("#{fixtures_path}/#{fixture}").reject {|f| f =~ /^\./} .each do |file|
       key = file.split('.').first.to_sym
       @data ||= {}
       @schema ||= {}
